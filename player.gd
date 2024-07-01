@@ -1,24 +1,17 @@
 extends CharacterBody2D
 
+var speed = 100
 
-@export var SPEED = 100.0
-@export var ACCELERATION = 20.0
-@export var FRICTION = 10.0
-@onready var sprite = $Sprite
+var player_state
 
 func _physics_process(delta):
+	var direction = Input.get_vector("left","right","up","down")
 	
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_vector("left","right","up","down").normalized()
-	if direction:
-		velocity = velocity.move_toward(direction * SPEED, ACCELERATION)
-	else:
-		velocity = velocity.move_toward(Vector2.ZERO, FRICTION)
+	if direction.x == 0 and direction.y == 0:
+		player_state = "idle"
+	elif direction.x !=  0 or direction.y != 0:
+		player_state = "walking"
 	
-	if velocity.x > 0:
-		sprite.flip_h = false
-	elif velocity.x < 0:
-		sprite.flip_h = true
-
+	velocity = direction * speed
 	move_and_slide()
+

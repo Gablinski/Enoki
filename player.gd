@@ -17,8 +17,8 @@ func _physics_process(delta):
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION)
 	
 	if velocity.x > 0:
-		sprite.flip_h = true
-	elif velocity.x < 0:
 		sprite.flip_h = false
+	elif velocity.x < 0:
+		sprite.flip_h = true
 
 	move_and_slide()

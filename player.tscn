@@ -258,12 +258,12 @@ radius = 6.08276
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_alikm")
 
-[node name="Sprite" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_7bp42")
 animation = &"idle"
+frame_progress = 0.854854
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
+position = Vector2(0, -7)
 shape = SubResource("CircleShape2D_s0ort")
-
-[node name="Timer" type="Timer" parent="."]

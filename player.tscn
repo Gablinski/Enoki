@@ -270,6 +270,7 @@ shape = SubResource("CircleShape2D_s0ort")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 z_index = 10
+scale = Vector2(1.289, -2.45777)
 zoom = Vector2(2.5, 2.5)
 limit_left = -340
 limit_top = -238

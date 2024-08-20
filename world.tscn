@@ -2296,10 +2296,10 @@ metadata/_edit_lock_ = true
 position = Vector2(44, -14)
 
 [node name="trees (left)" type="CollisionPolygon2D" parent="collisions"]
-polygon = PackedVector2Array(-17, 204, -384, 203, -384, 240, -16, 240)
+polygon = PackedVector2Array(-17, 204, -384, 203, -384, 244, -16, 244)
 
 [node name="trees (right)" type="CollisionPolygon2D" parent="collisions"]
-polygon = PackedVector2Array(17, 204, 159, 205, 160, 240, 16, 240)
+polygon = PackedVector2Array(17, 204, 160, 204, 160, 244, 16, 244)
 
 [node name="Base around hill" type="CollisionPolygon2D" parent="collisions"]
 polygon = PackedVector2Array(-275, -29, -156, -29, -156, -46, -17, -45, -15, -44, -14, -42, -14, -35, -16, -33, -18.5612, -32.012, -147, -33, -147, -21, -152, -16, -284, -15, -284, -204, -282, -212, -276, -219, 85, -219, 90, -213, 91, -206, 91, -160.071, 102, -160, 111, -127, 91, -127, 91, -32, 18, -32, 16, -33, 14, -35, 14, -42, 15, -44, 17, -45, 82, -45, 82, -124, 82, -134, 66, -134, 66, -174, 83, -173.675, 83, -214, -274, -213)

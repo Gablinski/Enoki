@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cin475n6h2ljy"]
+
+[ext_resource type="Texture2D" uid="uid://c5okufhrg4lxg" path="res://icon.svg" id="1_kk8m3"]
+[ext_resource type="Script" path="res://Sprite2D.gd" id="2_w6bd6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4nlao"]
+radius = 100.267
+height = 200.533
+
+[node name="arrow" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(-34.144, 41.5)
+rotation = 1.5708
+scale = Vector2(0.234375, 1.4553)
+texture = ExtResource("1_kk8m3")
+script = ExtResource("2_w6bd6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-51, 41.5)
+rotation = 1.5708
+scale = Vector2(0.234375, 1.64844)
+shape = SubResource("CapsuleShape2D_4nlao")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(-51, 41.5)
+scale = Vector2(1, 2.25)
+
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="Sprite2D" method="_on_visible_on_screen_enabler_2d_screen_exited"]

@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://Sprite2D.gd" id="2_w6bd6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4nlao"]
-radius = 100.267
-height = 200.533
+radius = 85.5354
+height = 197.763
 
 [node name="arrow" type="Area2D"]
 
@@ -18,7 +18,7 @@ texture = ExtResource("1_kk8m3")
 script = ExtResource("2_w6bd6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-51, 41.5)
+position = Vector2(-52, 41)
 rotation = 1.5708
 scale = Vector2(0.234375, 1.64844)
 shape = SubResource("CapsuleShape2D_4nlao")

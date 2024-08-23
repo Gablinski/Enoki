@@ -276,3 +276,5 @@ limit_left = -340
 limit_top = -238
 limit_right = 204
 limit_bottom = 226
+
+[node name="Marker2D" type="Marker2D" parent="."]

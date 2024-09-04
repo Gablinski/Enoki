@@ -256,6 +256,7 @@ animations = [{
 radius = 6.08276
 
 [node name="player" type="CharacterBody2D"]
+collision_layer = 3
 script = ExtResource("1_alikm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -276,5 +277,3 @@ limit_left = -340
 limit_top = -238
 limit_right = 204
 limit_bottom = 226
-
-[node name="Marker2D" type="Marker2D" parent="."]

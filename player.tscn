@@ -1,7 +1,23 @@
-[gd_scene load_steps=34 format=3 uid="uid://dtno6fjdnr3pk"]
+[gd_scene load_steps=38 format=3 uid="uid://dtno6fjdnr3pk"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_alikm"]
 [ext_resource type="Texture2D" uid="uid://bqyvwfyyllj57" path="res://Small-8-Direction-Characters_by_AxulArt/Small-8-Direction-Characters_by_AxulArt/Small-8-Direction-Characters_by_AxulArt.png" id="2_k2kan"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15ppt"]
+atlas = ExtResource("2_k2kan")
+region = Rect2(0, 242, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13xhc"]
+atlas = ExtResource("2_k2kan")
+region = Rect2(32, 220, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kn1wr"]
+atlas = ExtResource("2_k2kan")
+region = Rect2(64, 242, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mogtq"]
+atlas = ExtResource("2_k2kan")
+region = Rect2(96, 264, 16, 22)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vppkk"]
 atlas = ExtResource("2_k2kan")
@@ -117,6 +133,23 @@ region = Rect2(96, 216, 16, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7bp42"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15ppt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13xhc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kn1wr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mogtq")
+}],
+"loop": true,
+"name": &"attack_spin",
+"speed": 5.0
+}, {
 "frames": [],
 "loop": true,
 "name": &"death",
@@ -265,8 +298,8 @@ script = ExtResource("1_alikm")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_7bp42")
-animation = &"idle"
-frame_progress = 0.854854
+animation = &"attack_spin"
+frame_progress = 0.00737857
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -7)

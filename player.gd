@@ -4,16 +4,15 @@ var enemy_inattack_range = false
 var enemy_attack_cooldown = true
 var health = 100
 var player_alive = true
+#E@onready var main_menu: Control = $"."
 
 var speed = 77
 var player_state
 var attack_ip = false
-var current_dir = "none"  # Initialize to a default value
-var last_direction = Vector2.ZERO  # Initialize to a zero vector
+var current_dir = "none"  
 
-var is_spinning = false
-var spin_duration = 0.5  # Duration of the spin animation
-var spin_timer = 0.0  # Timer to track the spin duration
+
+
 
 func _physics_process(delta):
 	enemy_attack()
@@ -21,11 +20,11 @@ func _physics_process(delta):
 	if health <= 0:
 		player_alive = false  # Go back to menu or respawn
 		health = 0 
-		print("player died")
+		get_tree().change_scene_to_file("res://main_menu.tscn")
 		self.queue_free()
 	
 	var direction = Input.get_vector("left", "right", "up", "down")
-	last_direction = direction  # Update last_direction
+
 
 	# Update current_dir based on direction
 	if direction.x > 0:
@@ -39,14 +38,7 @@ func _physics_process(delta):
 	else:
 		current_dir = "none"
 
-	if is_spinning:
-		spin_timer += delta
-		if spin_timer >= spin_duration:
-			is_spinning = false
-			spin_timer = 0.0
-		else:
-			return  # Skip other processing while spinning
-
+	
 	if direction.x == 0 and direction.y == 0 and attack_ip == false:
 		player_state = "idle"
 	elif direction.x != 0 or direction.y != 0:
@@ -103,7 +95,3 @@ func _on_attack_cooldown_timeout():
 	if Input.is_action_just_pressed("attack"):
 		global.player_current_attack = true
 		attack_ip = true
-
-		is_spinning = true  # Start the spin attack
-		$AnimatedSprite2D.play("attack_spin")  # Play the spinning attack animation
-		$deal_attack_timer.start()  # Start the attack timer

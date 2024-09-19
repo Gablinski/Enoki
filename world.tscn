@@ -1891,6 +1891,7 @@ metadata/_edit_lock_ = true
 position = Vector2(40, 7)
 
 [node name="enemy" parent="." instance=ExtResource("7_sc85l")]
+position = Vector2(-46, 6)
 
 [node name="collisions" type="StaticBody2D" parent="."]
 position = Vector2(44, -14)

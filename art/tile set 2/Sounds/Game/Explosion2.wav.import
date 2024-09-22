@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bncdarf18hw7p"
+path="res://.godot/imported/Explosion2.wav-ebaa1d339f4cbb1d7907fa920b68ba5e.sample"
+
+[deps]
+
+source_file="res://art/tile set 2/Sounds/Game/Explosion2.wav"
+dest_files=["res://.godot/imported/Explosion2.wav-ebaa1d339f4cbb1d7907fa920b68ba5e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

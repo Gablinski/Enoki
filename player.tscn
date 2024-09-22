@@ -341,11 +341,10 @@ radius = 13.0384
 collision_layer = 3
 script = ExtResource("1_alikm")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_7bp42")
 animation = &"s-walk"
-frame_progress = 0.433699
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -7)

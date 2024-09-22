@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c220lwrws00xj"
+path="res://.godot/imported/3 - Revelation.ogg-cb362baebda7ffd2a858a67815235dab.oggvorbisstr"
+
+[deps]
+
+source_file="res://art/tile set 2/Musics/3 - Revelation.ogg"
+dest_files=["res://.godot/imported/3 - Revelation.ogg-cb362baebda7ffd2a858a67815235dab.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

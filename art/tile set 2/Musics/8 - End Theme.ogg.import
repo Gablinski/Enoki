@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cxn2lm5a7nhps"
+path="res://.godot/imported/8 - End Theme.ogg-6f12313b03efb068232a896aa245fd14.oggvorbisstr"
+
+[deps]
+
+source_file="res://art/tile set 2/Musics/8 - End Theme.ogg"
+dest_files=["res://.godot/imported/8 - End Theme.ogg-6f12313b03efb068232a896aa245fd14.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

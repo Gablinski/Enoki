@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://csgaw3ilb3me2"]
 
-[ext_resource type="Texture2D" uid="uid://dbrd7etaf4dlg" path="res://Background.png" id="1_45w6y"]
-[ext_resource type="FontFile" uid="uid://dowhxtjnoh2st" path="res://Mangiola-Regular.ttf" id="2_p1vbl"]
+[ext_resource type="Texture2D" uid="uid://dbrd7etaf4dlg" path="res://art/Background.png" id="1_45w6y"]
+[ext_resource type="FontFile" uid="uid://b2sxsx0jh0pir" path="res://art/Mangiola-Regular.ttf" id="2_p1vbl"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p2txi"]
 texture = ExtResource("1_45w6y")

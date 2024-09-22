@@ -52,25 +52,25 @@ func _physics_process(delta):
 
 func play_anim(dir):
 	if player_state == "idle" and attack_ip == false:  # Basic movement (left right up down)
-		$AnimatedSprite2D.play("idle")
+		$sprite.play("idle")
 	if player_state == "walking":
 		if dir.y == -1:
-			$AnimatedSprite2D.play("n_walk")
+			$sprite.play("n_walk")
 		if dir.x == 1:
-			$AnimatedSprite2D.play("e_walk")
+			$sprite.play("e_walk")
 		if dir.y == 1:
-			$AnimatedSprite2D.play("s-walk")
+			$sprite.play("s-walk")
 		if dir.x == -1:
-			$AnimatedSprite2D.play("w_walk")
+			$sprite.play("w_walk")
 		
 		if dir.x > 0.5 and dir.y < -0.5:  # 8 directional movement for movements in between 
-			$AnimatedSprite2D.play("ne_walk")
+			$sprite.play("ne_walk")
 		if dir.x > 0.5 and dir.y > 0.5:  
-			$AnimatedSprite2D.play("se_walk")
+			$sprite.play("se_walk")
 		if dir.x < -0.5 and dir.y > 0.5:  
-			$AnimatedSprite2D.play("sw-walk")
+			$sprite.play("sw-walk")
 		if dir.x < -0.5 and dir.y < -0.5:  
-			$AnimatedSprite2D.play("nw_walk")
+			$sprite.play("nw_walk")
 
 func player():
 	pass
@@ -103,18 +103,18 @@ func attack():
 	if Input.is_action_just_pressed("attack"):
 		global.player_current_attack = true
 		if dir == "right":
-			$AnimatedSprite2D.flip_h = false
-			$AnimatedSprite2D.play("side_attack")
+			$sprite.flip_h = false
+			$sprite.play("side_attack")
 			$deal_attack_timer.start()
 		if dir == "left":
-			$AnimatedSprite2D.flip_h = true
-			$AnimatedSprite2D.play("side_attack")
+			$sprite.flip_h = true
+			$sprite.play("side_attack")
 			$deal_attack_timer.start()
 		if dir == "down":
-			$AnimatedSprite2D.play("front_attack")
+			$sprite.play("front_attack")
 			$deal_attack_timer.start()
 		if dir == "up":
-			$AnimatedSprite2D.play("back_attack")
+			$sprite.play("back_attack")
 			$deal_attack_timer.start()
 
 func _on_deal_attack_timer_timeout() -> void:

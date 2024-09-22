@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://byko2dfl6wntx"
+path="res://.godot/imported/22 - Dream.ogg-3f98935407ca193824f62c7db82a6c73.oggvorbisstr"
+
+[deps]
+
+source_file="res://art/tile set 2/Musics/22 - Dream.ogg"
+dest_files=["res://.godot/imported/22 - Dream.ogg-3f98935407ca193824f62c7db82a6c73.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

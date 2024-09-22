@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bocihnanlqm34"
+path="res://.godot/imported/4 - Village.ogg-56fc445861fe7960947a72c1a019305f.oggvorbisstr"
+
+[deps]
+
+source_file="res://art/tile set 2/Musics/4 - Village.ogg"
+dest_files=["res://.godot/imported/4 - Village.ogg-56fc445861fe7960947a72c1a019305f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

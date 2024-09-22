@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bvshegx0ld06x"
+path="res://.godot/imported/Jump.wav-fffa95cb4de368c2778553495cea16c3.sample"
+
+[deps]
+
+source_file="res://art/tile set 2/Sounds/Game/Jump.wav"
+dest_files=["res://.godot/imported/Jump.wav-fffa95cb4de368c2778553495cea16c3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

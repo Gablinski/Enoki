@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://47tmvf5kt1rv"
+path="res://.godot/imported/Cancel.wav-0f08fff7657b09c4ff3b922efe41e827.sample"
+
+[deps]
+
+source_file="res://art/tile set 2/Sounds/Menu/Cancel.wav"
+dest_files=["res://.godot/imported/Cancel.wav-0f08fff7657b09c4ff3b922efe41e827.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,12 +1,12 @@
 [gd_scene load_steps=14 format=3 uid="uid://bnodcwb7c4aog"]
 
-[ext_resource type="PackedScene" uid="uid://dtno6fjdnr3pk" path="res://player.tscn" id="1_obgvg"]
+[ext_resource type="PackedScene" uid="uid://qx6sqhiodlqj" path="res://player.tscn" id="1_obgvg"]
 [ext_resource type="Texture2D" uid="uid://bniid8sm3s801" path="res://art/tile set 2/Backgrounds/Tilesets/TilesetNature.png" id="2_dkib6"]
 [ext_resource type="Texture2D" uid="uid://ctvpgel5kfbrc" path="res://art/tile set 1/SERENE_VILLAGE_REVAMPED/Serene_Village_16x16.png" id="2_w8xli"]
 [ext_resource type="Texture2D" uid="uid://di731wyxld3xb" path="res://art/tile set 2/Backgrounds/Tilesets/TilesetDesert.png" id="4_gvlw3"]
 [ext_resource type="Texture2D" uid="uid://8sjbxfingcxu" path="res://art/tile set 2/Backgrounds/Tilesets/TilesetTowers.png" id="5_usbs6"]
 [ext_resource type="Texture2D" uid="uid://b31oc6ke8x3ga" path="res://art/tile set 2/Backgrounds/Tilesets/TilesetVillageAbandoned.png" id="6_bsubl"]
-[ext_resource type="PackedScene" uid="uid://dk5ogvy5iqftt" path="res://enemy.tscn" id="7_sc85l"]
+[ext_resource type="PackedScene" uid="uid://ci3mkkq6aqkju" path="res://enemy.tscn" id="7_sc85l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y7app"]
 texture = ExtResource("2_dkib6")
@@ -1893,6 +1893,21 @@ position = Vector2(40, 7)
 
 [node name="enemy" parent="." instance=ExtResource("7_sc85l")]
 position = Vector2(-46, 6)
+
+[node name="enemy2" parent="." instance=ExtResource("7_sc85l")]
+position = Vector2(60, -184)
+
+[node name="enemy3" parent="." instance=ExtResource("7_sc85l")]
+position = Vector2(-320, 8)
+
+[node name="enemy4" parent="." instance=ExtResource("7_sc85l")]
+position = Vector2(48, 165)
+
+[node name="enemy5" parent="." instance=ExtResource("7_sc85l")]
+position = Vector2(-247, 158)
+
+[node name="enemy6" parent="." instance=ExtResource("7_sc85l")]
+position = Vector2(-202, -128)
 
 [node name="collisions" type="StaticBody2D" parent="."]
 position = Vector2(44, -14)

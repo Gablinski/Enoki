@@ -1,8 +1,8 @@
-[gd_scene load_steps=44 format=3 uid="uid://dtno6fjdnr3pk"]
+[gd_scene load_steps=44 format=3 uid="uid://qx6sqhiodlqj"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_alikm"]
-[ext_resource type="Texture2D" uid="uid://bqyvwfyyllj57" path="res://Small-8-Direction-Characters_by_AxulArt/Small-8-Direction-Characters_by_AxulArt/Small-8-Direction-Characters_by_AxulArt.png" id="2_k2kan"]
-[ext_resource type="Texture2D" uid="uid://dcaat6x3ov5xr" path="res://Small-8-Direction-Characters_by_AxulArt-1.png.png" id="2_n6656"]
+[ext_resource type="Texture2D" uid="uid://bqyvwfyyllj57" path="res://character/characters/Small-8-Direction-Characters_by_AxulArt/Small-8-Direction-Characters_by_AxulArt/Small-8-Direction-Characters_by_AxulArt.png" id="2_k2kan"]
+[ext_resource type="Texture2D" uid="uid://dcaat6x3ov5xr" path="res://character/Small-8-Direction-Characters_by_AxulArt-1.png.png" id="2_n6656"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ix74w"]
 atlas = ExtResource("2_n6656")
@@ -370,6 +370,17 @@ wait_time = 0.5
 
 [node name="deal_attack_timer" type="Timer" parent="."]
 wait_time = 0.5
+
+[node name="health" type="Label" parent="."]
+offset_left = -52.0
+offset_top = -54.0
+offset_right = 55.0
+offset_bottom = -31.0
+text = "HEALTH = 100"
+
+[node name="score" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
 
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]

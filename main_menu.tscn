@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://cb0c7koi830or"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_0hpvd"]
-[ext_resource type="Texture2D" uid="uid://dbrd7etaf4dlg" path="res://Background.png" id="1_bu6xl"]
-[ext_resource type="FontFile" uid="uid://dowhxtjnoh2st" path="res://Mangiola-Regular.ttf" id="2_0qa6t"]
+[ext_resource type="Texture2D" uid="uid://dbrd7etaf4dlg" path="res://art/Background.png" id="1_bu6xl"]
+[ext_resource type="FontFile" uid="uid://b7dcrnqvkwugw" path="res://Mangiola-Regular.ttf" id="2_0qa6t"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p2txi"]
 texture = ExtResource("1_bu6xl")

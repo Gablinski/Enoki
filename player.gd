@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+
 var enemy_inattack_range = false
 var enemy_attack_cooldown = true
 var health = 100
@@ -7,8 +8,10 @@ var player_alive = true
 #E@onready var main_menu: Control = $"."
 
 var speed = 77
+
 var player_state
-var attack_ip = false
+ 
+var attack_ip = false #I chose this variable name to represent the attack in progress, and shortened it down to ip 
 var current_dir = "none"  
 
 
@@ -50,8 +53,13 @@ func _physics_process(delta):
 	
 	play_anim(direction)
 
+		# This is the basic movement for my player, RIGHT, UP, DOWN, LEFT directions
+		#if the player presses the left arrow key (or "a" key), then the player will move to the left direction.
+		#if the player presses the right arrow key (or "d" key), then the player will move to the right direction. 
+		#if the player presses the up arrow key (or "w" key), then the player will move to the up direction. 
+		#if the player presses the down arrow key (or "s" key), then the player will move to the down direction. 
 func play_anim(dir):
-	if player_state == "idle" and attack_ip == false:  # Basic movement (left right up down)
+	if player_state == "idle" and attack_ip == false:  
 		$sprite.play("idle")
 	if player_state == "walking":
 		if dir.y == -1:
@@ -63,7 +71,12 @@ func play_anim(dir):
 		if dir.x == -1:
 			$sprite.play("w_walk")
 		
-		if dir.x > 0.5 and dir.y < -0.5:  # 8 directional movement for movements in between 
+		# 8 directional movement for movements in between 
+		#If the player holds the right arrow key and the up arrow key then the player will move in the nw direction
+		#If the player holds the left arrow key and the up arrow key then the player will move in the ne direction
+		#If the player holds the right arrow key and the down arrow key then the player will move in the sw direction
+		#If the player holds the left arrow key and the down arrow key then the player will move in the se direction
+		if dir.x > 0.5 and dir.y < -0.5:  
 			$sprite.play("ne_walk")
 		if dir.x > 0.5 and dir.y > 0.5:  
 			$sprite.play("se_walk")

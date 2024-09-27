@@ -15,21 +15,21 @@ var current_dir = "none"
 var score = 0  # Player's score
 var slimes_killed = 0  # Counter for killed slimes
 
-# Function to add score
+# Function to add to the score
 func add_score(amount: int) -> void:
-	score += amount  # Increase score by the given amount
-	score_label.text = str(score)  # Update the score label
+	score += amount  # This ncreases score by the given amount
+	score_label.text = str(score)  # Updates the players score
 
-# Function to handle slime killed
+# Function to handle the slime being killed
 func slime_killed():
-	slimes_killed += 1  # Increment the killed slime counter
-	add_score(10)  # Optionally add to score
-	if slimes_killed >= 5:  # Check if 5 slimes have been killed
+	slimes_killed += 1  
+	add_score(1)  
+	if slimes_killed >= 5:  # Checks if 5 slimes have been killed
 		get_tree().change_scene_to_file("res://win_menu.tscn")  # Change to win menu scene
 
 # This is the main function that runs every frame to handle player actions and enemy interactions.
-# This updates the player's movement, checks for enemy attacks, and manages health of the player.
-# If the player’s health reaches zero, it switches to the main menu.
+# This updates the player's movement, checks for enemy attacks, and manages the health of the player.
+# If the player’s health reaches zero, it then changes to the main menu.
 func _physics_process(delta):
 	enemy_attack()  # This checks if the enemy is attacking and reduces health if needed
 	attack()  # This checks if the player is trying to attack and handle animations
@@ -37,16 +37,16 @@ func _physics_process(delta):
 	# Update the health label to reflect current health
 	health_label.text = str(health)
 
-	# Check if the player is dead and change the scene if so
+	# This checks if the player is dead and changes the scene if it is
 	if health <= 0:
-		player_alive = false  # Player is not alive anymore
+		player_alive = false
 		health = 0 
-		get_tree().change_scene_to_file("res://main_menu.tscn")  # Go to the main menu
-		self.queue_free()  # Remove the player from the scene
+		get_tree().change_scene_to_file("res://main_menu.tscn")  # Goes to the main menu
+		self.queue_free()  # This emoves the player from the scene
 	
 	var direction = Input.get_vector("left", "right", "up", "down")
 
-	# Update current_dir based on direction
+	# Updates current_dir based on direction
 	if direction.x > 0:
 		current_dir = "right"
 	elif direction.x < 0:
@@ -101,7 +101,7 @@ func play_anim(dir):
 			$sprite.play("nw_walk")
 
 func player():
-	pass  # This is a placeholder for any future things related to the player
+	pass  
 
 # Function that runs when an enemy enters the player's hitbox.
 # This sets a flag to show that the player is in danger of being attacked.
@@ -122,7 +122,7 @@ func enemy_attack():
 		health -= 10  # Decreases health by 10
 		enemy_attack_cooldown = false  # This sets the cooldown to false
 		$attack_cooldown.start()  # This starts the cooldown timer
-		print(health)  # Print the current health for debugging
+		print(health)  # This prints the current health for debugging
 
 # Function to reset the enemy's attack cooldown after a delay.
 # This allows the enemy to attack again after the timer finishes.

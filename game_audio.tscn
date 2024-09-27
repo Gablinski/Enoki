@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bagk2b3j4af0e"]
+
+[ext_resource type="AudioStream" uid="uid://cl2vujrtgnlm4" path="res://Free Lofi Music (For Videos) - Faithful Mission by Artificial.Music.mp3" id="1_2iwu7"]
+
+[node name="GameAudio" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_2iwu7")
+autoplay = true
